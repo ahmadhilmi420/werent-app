@@ -26,31 +26,28 @@ import axios from "axios";
 
 // putProductsDetailsById(1); // Example usage, replace with actual ID
 
-const getReviews = () => {
+const postReviews = () => {
   axios
-    .get("https://indirect-yasmin-ananana-483e9951.koyeb.app/reviews")
+    .post("https://indirect-yasmin-ananana-483e9951.koyeb.app/reviews", {
+      id: 3,
+      product_id: 1,
+      rating: 5,
+      comment: "Great product!",
+      user_id: 7,
+      created_at: "2023-10-01T12:00:00Z",
+      updated_at: "2023-10-01T12:00:00Z",
+    })
     .then((res) => {
-      console.log("Reviews fetched:", res.data);
+      console.log("Reviews posted:", res.data);
       return res.data;
     })
     .catch((error) => {
-      console.error("Error fetching reviews:", error);
+      console.error("Error posting reviews:", error);
       throw error;
     });
 };
 
-const getReviewsById = (user_id: number) => {
-  axios
-    .get(`https://indirect-yasmin-ananana-483e9951.koyeb.app/reviews/user/${user_id}`)
-    .then((res) => {
-      console.log("Reviews fetched:", res.data);
-      return res.data;
-    })
-    .catch((error) => {
-      console.error("Error fetching reviews:", error);
-      throw error;
-    });
-};
+postReviews(); // Example usage, replace with actual data
 
 interface ProductListProps {
   products: Product[];
