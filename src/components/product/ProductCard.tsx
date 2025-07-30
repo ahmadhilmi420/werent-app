@@ -1,13 +1,22 @@
-import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types";
 import Card from "../ui/Card";
-import { getProducts } from "services/product";
+import axios from "axios";
 
-useEffect(() => {
-  getProducts();
-}, []);
+// const getProducts = () => {
+//   return axios
+//     .get("https://indirect-yasmin-ananana-483e9951.koyeb.app/products")
+//     .then((res) => {
+//       console.log("Products fetched:", res.data);
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching products:", error);
+//       throw error;
+//     });
+// };
+
+// getProducts();
 
 interface ProductCardProps {
   product: Product;

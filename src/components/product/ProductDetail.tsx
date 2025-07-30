@@ -5,11 +5,6 @@ import Image from "next/image";
 import { Product, Review } from "@/types";
 import Button from "../ui/Button";
 import ReviewList from "./ReviewList";
-import { getProducts } from "services/product";
-
-// useEffect(() => {
-//   getProducts();
-// }, []);
 
 interface ProductDetailProps {
   product: Product;
