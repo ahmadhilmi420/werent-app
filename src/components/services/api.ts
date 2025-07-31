@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Product } from "@/types"; // Adjust the import path as necessary
 
-export const getProducts = async (): Promise<Product[]> => {
+export const getProducts = async (data: Product[]): Promise<Product[]> => {
   const response = await axios.get("https://indirect-yasmin-ananana-483e9951.koyeb.app/products");
   return response.data;
 };

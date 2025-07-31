@@ -34,7 +34,7 @@ export default function Home() {
               View All
             </Link>
           </div>
-          <ProductList />
+          <ProductList products={featuredProducts} />
         </div>
       </section>
 

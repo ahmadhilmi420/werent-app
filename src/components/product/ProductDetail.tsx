@@ -17,7 +17,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, reviews }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Product Image */}
         <div className="relative w-full h-[400px] bg-gray-100 rounded-lg overflow-hidden">
-          <Image src={product.image} alt={product.name} fill style={{ objectFit: "cover" }} priority />
+          <Image src={product.image_url} alt={product.name} fill style={{ objectFit: "cover" }} priority />
         </div>
 
         {/* Product Info */}
@@ -27,7 +27,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, reviews }) => {
 
           <div className="mb-6">
             <h2 className="text-xl font-semibold mb-2">Description</h2>
-            <p className="text-gray-700">{product.description}</p>
+            <p className="text-gray-700">{product.details.description}</p>
           </div>
 
           <div className="mb-6">
