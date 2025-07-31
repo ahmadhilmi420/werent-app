@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/types";
 import Card from "../ui/Card";
-import axios from "axios";
+import { Product } from "@/types"; // Adjust the import path as necessary
+import { getProducts } from "../services/api"; // Adjust the import path as necessary
 
 // const getProducts = () => {
 //   return axios

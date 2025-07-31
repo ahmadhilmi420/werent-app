@@ -1,17 +1,24 @@
 import axios from "axios";
-import { Product } from "../types";
+import { Product } from "@/types"; // Adjust the import path as necessary
 
-export const getProducts = () => {
-  return axios
-    .get("https://indirect-yasmin-ananana-483e9951.koyeb.app/products")
-    .then((res) => {
-      console.log("Products fetched:", res.data);
-    })
-    .catch((error) => {
-      console.error("Error fetching products:", error);
-      throw error;
-    });
+export const getProducts = async (): Promise<Product[]> => {
+  const response = await axios.get("https://indirect-yasmin-ananana-483e9951.koyeb.app/products");
+  return response.data;
 };
+
+// export const getProducts = () => {
+//   axios
+//     .get("https://indirect-yasmin-ananana-483e9951.koyeb.app/products")
+//     .then((res) => {
+//       console.log("Products fetched:", res.data);
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching products:", error);
+//       throw error;
+//     });
+// };
+
+// export const products = getProducts();
 
 export const getProductsId = async (id: number) => {
   try {
