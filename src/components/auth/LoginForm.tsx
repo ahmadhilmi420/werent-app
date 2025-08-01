@@ -89,7 +89,7 @@ const LoginForm: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             error={errors.email}
-            placeholder="your@email.com"
+            placeholder="Input your email"
             required
           />
           
