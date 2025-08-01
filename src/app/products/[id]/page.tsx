@@ -19,7 +19,7 @@ export function generateStaticParams() {
 export default async function ProductPage(props: Props) {
   // Pastikan params sudah di-await
   const { params } = props;
-  const { id: idString } = params;
+  const { id: idString } = await params;
   
   // Konversi id ke number dengan cara yang aman
   const id = parseInt(idString, 10);
