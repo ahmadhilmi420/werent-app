@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-white">Elegance</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">WeRent</h3>
             <p className="text-gray-200">
               Curating exceptional attire for your most memorable occasions.
             </p>
@@ -41,13 +41,13 @@ const Footer: React.FC = () => {
           
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Contact Us</h3>
-            <p className="text-gray-200 mb-2">Email: concierge@elegance.com</p>
+            <p className="text-gray-200 mb-2">Email: info@werent.com</p>
             <p className="text-gray-200 mb-2">Phone: +62 812 3456 7890</p>
           </div>
         </div>
         
         <div className="border-t border-green-700 mt-8 pt-6 text-center text-gray-200">
-          <p>&copy; {new Date().getFullYear()} Elegance. Crafting memorable experiences through exceptional attire.</p>
+          <p>&copy; {new Date().getFullYear()} WeRent. Crafting memorable experiences through exceptional attire.</p>
         </div>
       </div>
     </footer>
