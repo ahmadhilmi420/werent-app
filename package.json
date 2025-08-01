@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "clean": "rimraf .next && rimraf build",
-    "build": "npm run clean && next build || (rimraf .next/export && next build)",
+    "clean": "rimraf -rf .next && rimraf -rf build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
