@@ -5,7 +5,7 @@ import ProductDetail from '@/components/product/ProductDetail';
 import { getProductById, getReviewsForProduct, products } from '@/lib/data';
 
 type Props = {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }
 
 // Generate static params untuk semua produk

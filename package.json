@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "clean": "rimraf .next && rimraf build",
+    "build": "npm run clean && next build || (rimraf .next/export && next build)",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,6 +23,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
